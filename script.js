@@ -32,7 +32,10 @@ function buttonClick(){
 	if(rad[2].checked){
 		primeAll();
 	} 
+	}
+	}
 }
+
 
 function sumAll(){
 	resultDiv = document.getElementById('result');
@@ -92,7 +95,7 @@ function primeAll(){
 	arr[1]=false;
 	for(i=2;i*i<x2;i++){
 		if(arr[i]){
-			for(j=i*i;j<x2;j+=i;){
+			for(j=i*i;j<x2;j+=i){
 				arr[j]=false;
 			}
 		}
@@ -100,9 +103,9 @@ function primeAll(){
 	for(i=0;i<x1;i++){
 		arr[i]=false;
 	}
-	for(i=0;i<arr.length;i++){
+	for(i=0;i<=arr.length;i++){
 		if(arr[i]==true){
-			resultDiv.append(" "+arr[i]);
+			resultDiv.append(" "+i);
 		}
 	}
 }
